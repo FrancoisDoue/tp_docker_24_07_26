@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 -- Structure de la table `account`
 --
 
+USE `spring_sec_ex2`
+
 CREATE TABLE `account` (
   `id` int NOT NULL,
   `email` varchar(255) NOT NULL,
