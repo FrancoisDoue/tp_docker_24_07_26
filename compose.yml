@@ -10,7 +10,7 @@ services:
       - 6033:3306
     volumes:
       - todo_db:/var/lib/mysql
-      - ./database/script.sql:/docker-entry-point-initdb.d/script.sql
+      # - ./database/script.sql:/docker-entry-point-initdb.d/script.sql
     networks:
       - todo_network
     
