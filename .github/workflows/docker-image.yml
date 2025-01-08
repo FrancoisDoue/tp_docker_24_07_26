@@ -16,4 +16,4 @@ jobs:
       run: docker build ./back_end --file Dockerfile --tag todo-backend:$(date +%s);
 
     - name: Build the Docker frontend image
-      run: docker build ./front_end --file Dockerfile --tage todo-frontend:$(date +%s);
+      run: docker build ./front_end --file Dockerfile --tag todo-frontend:$(date +%s);
