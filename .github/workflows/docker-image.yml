@@ -5,16 +5,15 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: |
-        docker build ./back_end --file Dockerfile --tag todo-backend:$(date +%s);
-        docker build ./front_end --file Dockerfile --tag todo-frontend:$(date +%s);
+
+    - name: Build the Docker backend image
+      run: docker build ./back_end --file Dockerfile --tag todo-backend:$(date +%s);
+
+    - name: Build the Docker frontend image
+      run: docker build ./front_end --file Dockerfile --tage todo-frontend:$(date +%s);
